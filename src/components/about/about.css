@@ -1,0 +1,144 @@
+.about__container {
+  display: grid;
+  grid-template-columns: 30% 60%;
+  gap: 10%;
+}
+
+.about__me {
+  width: 100%;
+  aspect-ratio: 1/0.89;
+  border-radius: 2rem;
+  background: linear-gradient(
+    45deg,
+    transparent,
+    var(--color-primary),
+    transparent
+  );
+  position: relative;
+}
+
+.about__me-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 2rem;
+  overflow: hidden;
+  transform: rotate(10deg);
+  transition: var(--transition);
+}
+/* 
+.img-black {
+  object-fit: cover;
+  border-radius: 2rem;
+} */
+
+.about__me-image:hover {
+  transform: rotate(0deg);
+}
+
+.about__cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.about__card {
+  width: 15rem;
+  background: var(--color-bg-variant);
+  border-radius: 1rem;
+  border: 1px solid transparent;
+  padding: 2rem 1rem;
+  text-align: center;
+  transition: var(--transition);
+}
+
+.about__card:hover {
+  background: transparent;
+  border-color: var(--color-primary-variant);
+  cursor: default;
+}
+
+.about__icons {
+  color: var(--color-primary);
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+.about__card h5 {
+  font-size: 0.95rem;
+}
+
+.about__card small {
+  font-size: 0.7rem;
+  color: var(--color-light);
+}
+
+.about__content p {
+  margin: 2rem 0 2.6rem;
+  color: var(--color-light);
+  text-align: justify;
+}
+.year_of_graduation {
+  color: var(--color-primary);
+  font-size: 10px;
+}
+.about__card li {
+  margin: 10px 0;
+}
+/*Media Queries (Medium Devices)*/
+@media screen and (max-width: 1024px) {
+  .about__container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .about__me {
+    width: 50%;
+    margin: 2rem auto 4rem;
+  }
+
+  .about__content p {
+    margin: 1rem 0 1.5rem;
+  }
+}
+
+/*Media Queries (Small Devices)*/
+@media screen and (max-width: 600px) {
+  .about__me {
+    width: 80%;
+    margin: 0 auto 3rem;
+  }
+  .about__me-image {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 2rem;
+    overflow: hidden;
+    transform: rotate(10deg);
+    transition: var(--transition);
+  }
+
+  .img-black {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 2rem;
+  }
+
+  .about__cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about__content {
+    text-align: center;
+  }
+
+  .about__content p {
+    margin: 1.5rem 0;
+  }
+}
